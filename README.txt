@@ -1,0 +1,1 @@
+This is version 1.1 of Djatoka with an IReferentResolver called LocalResolver, which resolves file:// paths to local files without caching a copy. This prevents Djatoka from creating a cached copy of a file that is already local.
