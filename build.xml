@@ -24,7 +24,7 @@
 
   <!-- environment variables -->
   <property environment="env"/>
-  <property name="version" value="1.1" />
+  <property name="version" value="1.2" />
 
   <!-- source/build directory -->
   <property name="bin.dir"      value="${basedir}/bin"/>
@@ -89,7 +89,7 @@
     <delete file="${lib.dir}/adore-djatoka-${version}.jar"/>
     <jar jarfile="${dist.dir}/adore-djatoka-${version}.jar" basedir="${build.dir}/classes"/>
     <copy file="${dist.dir}/adore-djatoka-${version}.jar" todir="${lib.dir}"/>
-    <war destfile="${dist.dir}/adore-djatoka.war" webxml="${src.dir}/web/WEB-INF/web.xml">
+    <war destfile="${dist.dir}/adore-djatoka-${version}.war" webxml="${src.dir}/web/WEB-INF/web.xml">
         <fileset dir="${src.dir}/web" excludes="WEB-INF/web.xml"/>
         <!-- Define Required Modules -->
         <lib dir="${dist.dir}">

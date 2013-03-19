@@ -1,0 +1,7 @@
+*.tar.gz
+dist
+*.iml
+.idea
+doc
+tmp
+lib/adore-djatoka-*.jar
