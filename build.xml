@@ -118,6 +118,25 @@
             <include name="src/web/**/*"/>
         </tarfileset>
     </tar>
+    <!-- tarfile for deployment on imageservers.  creates a home directory-->
+    <tar destfile="adore-djatoka-imageserver-home-${version}.tar.gz" compression="gzip" >
+      <tarfileset dir="." mode="755" prefix="home">
+          <include name="bin/**/*"/>
+      </tarfileset>
+      <tarfileset dir="." prefix="home">
+          <exclude name="adore-djatoka-${version}.tar.gz"/>
+          <exclude name="src/gov/lanl/adore/djatoka/test/"/>
+          <include name="build.xml"/>
+          <include name="README.txt"/>
+          <include name="INSTALL.txt"/>
+          <include name="LICENSE.txt"/>
+          <include name="dist/**/*"/>
+          <include name="etc/**/*"/>
+          <include name="lib/**/*"/>
+          <include name="src/gov/**/*"/>
+          <include name="src/web/**/*"/>
+      </tarfileset>
+    </tar>
   </target>
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
