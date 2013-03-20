@@ -91,10 +91,6 @@
     <copy file="${dist.dir}/adore-djatoka-${version}.jar" todir="${lib.dir}"/>
     <war destfile="${dist.dir}/adore-djatoka-${version}.war" webxml="${src.dir}/web/WEB-INF/web.xml">
         <fileset dir="${src.dir}/web" excludes="WEB-INF/web.xml"/>
-        <!-- Define Required Modules -->
-        <lib dir="${dist.dir}">
-          <include name="adore-djatoka-${version}.jar"/>
-        </lib>
         <lib dir="${lib.dir}">
           <include name="*.jar"/>
           <exclude name="servlet-api.jar"/>
